@@ -34,7 +34,7 @@ pub fn console_getchar() -> usize {
 }
 
 pub fn shutdown() -> ! {
-    println!("start shutdown");
+    println!("start shutdown...");
     sbi_call(SBI_SHUTDOWN, 0, 0, 0);
     panic!("It should shutdown,can't reach here!");
 }

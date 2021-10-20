@@ -19,7 +19,10 @@ RUN set -x; \
         && $RUSTUP -y --default-toolchain nightly --profile minimal \
         && . $HOME/.cargo/env \
         && rustup target add riscv64gc-unknown-none-elf \
-        && cargo install cargo-binutils && rustup component add llvm-tools-preview
+        && cargo install cargo-binutils  \
+        && rustup component add llvm-tools-preview \
+        && rustup component add rustfmt
+
 
 #install qemu \
 RUN set -x; \
