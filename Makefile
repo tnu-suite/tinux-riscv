@@ -8,8 +8,8 @@ build-docker:
 	docker build -t ${DOCKER_NAME} .
 
 run:
-	cd os;cargo run;echo $$?;
+	cd os;make run
 
 build:
-	cd os;cargo build
+	cd os;make build
 
