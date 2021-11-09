@@ -13,10 +13,6 @@ BOOTLOADER := ../bootloader/$(SBI)-$(BOARD).bin
 # KERNEL ENTRY
 KERNEL_ENTRY_PA := 0x80200000
 
-# Run K210
-K210-SERIALPORT	= /dev/ttyUSB0
-K210-BURNER = ../tools/kflash.py
-
 # Binutils
 OBJDUMP := rust-objdump --arch-name=riscv64
 OBJCOPY := rust-objcopy --binary-architecture=riscv64
